@@ -1,0 +1,24 @@
+{
+  "name": "npm-mono",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:frontend": "npm run dev -w @joyfulweb/frontend",
+    "dev:backend": "npm run dev -w @joyfulweb/backend",
+    "dev:core": "npm run dev -w @joyfulweb/core",
+    "setup":"npm run prisma -w @joyfulweb/backend",
+    "dev": "npm run dev:core & npm run dev:backend & npm run dev:frontend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/core",
+    "apps/backend",
+    "apps/frontend"
+  ],
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
